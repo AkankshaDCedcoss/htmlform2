@@ -1,0 +1,47 @@
+#button1
+{
+    background-color: lightblue;
+    padding: 1%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+}
+#button2
+{
+    
+        background-color: lightblue;
+        
+      
+    
+}
+#name
+{
+    margin-left: 9%;
+    margin-top: 3%;
+    padding: 1%;
+}
+#id
+{
+    margin-left: 13%;
+    margin-top: 3%;
+    padding: 1%;
+}
+#price
+{
+    margin-left: 10%;
+    margin-top: 3%;
+    padding: 1%;
+}
+#quantity
+{
+    margin-left: 7%;
+    margin-top: 3%;
+    padding: 1%;
+}
+.main
+{
+    margin-left: 5%;
+    margin-top: 3%;
+    background-color: lightgray;
+    padding: 10%;
+}
