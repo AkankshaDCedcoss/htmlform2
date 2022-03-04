@@ -29,7 +29,7 @@ function inputData(details) {
       details[i].price +
       "</td><td>" +
       details[i].quantity +
-      "</td><td><input type='text' id='newquantity' value='' ><input type='button' id='button2' value='UPDATE' onclick='update(10)'></td></tr>";
+      "</td><td><input type='text' id='newquantity"+i+"' value='1'  ><input type='button' id='button2' value='UPDATE' onclick='update("+details[i].id+")'></td></tr>";
   }
   html += "</table>";
   document.getElementById("display").innerHTML = html;
@@ -47,26 +47,34 @@ function display() {
       details[i].price +
       "</td><td>" +
       details[i].quantity +
-      "</td><td><input type='text' id='newquantity' value='' ><input type='button' id='button2' value='UPDATE' onclick='update(10)'></td></tr>";
+      "</td><td><input type='text' id='newquantity"+i+"' value='1' ><input type='button' id='button2' value='UPDATE' onclick='update("+details[i].id+")'></td></tr>";
   }
   html += "</table>";
+  //console.log("newquantity+"+i);
   document.getElementById("display").innerHTML = html;
 }
 
-function update(val1) {
-  console.log(val1);
-  var price = parseInt(document.getElementById("price").value);
-  var quantity = parseInt(document.getElementById("quantity").value);
-  val1 = document.getElementById("id").value;
-  var new_quantity = parseInt(document.getElementById("newquantity").value);
-  console.log(new_quantity);
-  var avg_price = parseInt(price / quantity);
-  console.log(avg_price);
-  var new_price = parseInt(avg_price * new_quantity);
-  console.log(new_price);
 
-  for (var i = 0; i < details.length; i++) {
-    if (details[i].id == val1) {
+
+function update(m) {
+   for (var i = 0; i < details.length; i++) {
+    if (details[i].id == m) {
+      
+   
+   
+   var price = parseInt(document.getElementById("price").value);
+  var quantity = parseInt(document.getElementById("quantity").value);
+  var new_quantity = document.getElementById("newquantity"+i).value;
+   console.log(new_quantity);
+  var a=parseInt(new_quantity);
+  console.log(a);
+  var avg_price = parseInt(price / quantity);
+
+  var new_price = parseInt(avg_price * a);
+
+
+  
+    
       details[i].quantity = new_quantity;
       details[i].price = new_price;
     }
